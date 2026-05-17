@@ -3,110 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Cruiser – Expressz Városi Segítség</title>
+  <title>Urban Cruiser</title>
 
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="bg-glow" aria-hidden="true"></div>
-  <div class="bg-glow second" aria-hidden="true"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow second"></div>
 
   <main class="container">
-    <!-- HERO SZEKCIÓ -->
     <header class="hero fade-in">
-      <div class="status-badge">
-        <span class="pulse-dot"></span>
-        <span class="status-text">ÚTON / AKTÍV VAGYOK</span>
-      </div>
-      <h1>URBAN<br><span class="highlight">CRUISER</span></h1>
-      <p class="subtitle">A város nem vár meg. Én sem.</p>
-      <p class="hero-marketing">Otthon felejtett kulcs? Sürgős szerződés? Dugóba akadtál, de ott kellene lenned? Két keréken nincs akadály. Nem futárszolgálat vagyok, hanem a személyes felmentősereged a városi káoszban.</p>
-      
-      <a href="#kapcsolat" class="cta-scroll">Azonnali mentőöv ↓</a>
+      <span class="badge"><span class="icon">🛵</span> URBAN SERVICE</span>
+      <h1>URBAN<br>CRUISER</h1>
+      <p class="subtitle">Motoros segítség. Azonnal.</p>
     </header>
 
-    <!-- INTERAKTÍV SZOLGÁLTATÁSOK SZEKCIÓ -->
     <section class="glass slide-up">
-      <h2>Miben segítek?</h2>
-      <p class="section-desc">Kattints a kártyákra a részletekért, és válaszd ki, mire van szükséged most azonnal!</p>
-      
-      <div class="services-toggle">
-        <button type="button" class="tab-btn active" onclick="switchService('csomag')">📦 Csomag</button>
-        <button type="button" class="tab-btn" onclick="switchService('level')">📨 Dokumentum</button>
-        <button type="button" class="tab-btn" onclick="switchService('fuvar')">🚗 Gyors Fuvar</button>
-      </div>
-
-      <div class="service-display">
-        <div id="service-content" class="service-card-active">
-          <h3>Apró csomagok azonnal</h3>
-          <p>Nem holnap. Nem délután. <strong>Most.</strong> Ha a futárcégek órás ablakai neked túl lassúak, vagy azonnal át kell venned valamit a város túloldalán. Max. hátizsák méretig bármit eljuttatok a célba, miközben az autók még a pirosnál állnak.</p>
-        </div>
+      <h2>Mit csinálunk?</h2>
+      <div class="grid">
+        <div class="card">📦 Apró csomagok</div>
+        <div class="card">📨 Levél / dokumentum</div>
+        <div class="card">🚗 Kell egy gyors fuvar?</div>
       </div>
     </section>
 
-    <!-- MIÉRT ÉN SZEKCIÓ (MARKETING ÉRVEK) -->
     <section class="glass slide-up">
-      <h2>Miért engem hívj?</h2>
-      <ul class="marketing-list">
-        <li>
-          <span class="list-icon">⚡</span>
-          <div>
-            <strong>A dugó nekem nem ellenfél:</strong> Amíg a taxi és a futárautó a körúton araszol, én a sorok között már rég célba értem.
-          </div>
-        </li>
-        <li>
-          <span class="list-icon">🤝</span>
-          <div>
-            <strong>Közvetlen és rugalmas:</strong> Nincs diszpécser, nincs felesleges várakozási idő. Egyből velem beszélsz, és azonnal indulok.
-          </div>
-        </li>
-        <li>
-          <span class="list-icon">🔒</span>
-          <div>
-            <strong>Maximális biztonság:</strong> A csomagod nem egy raktárban hánykolódik. Felveszem, elviszem, átadom. Vigyázok rá, mintha a sajátom lenne.
-          </div>
-        </li>
-      </ul>
+      <h2>Hívj vagy dobj egy üzit!</h2>
+      <p class="price">
+        <button class="cta" onclick="openMessenger()">
+          <svg width="18" height="18" viewBox="0 0 24 24">
+            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2"/>
+            <path d="M2 2L15 22L11 13L12 9L22 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+          Kapcsolat
+        </button><br>
+        <span style="position: relative; float: right">és megbeszéljük.</span>
+      </p>
     </section>
 
-    <!-- KAPCSOLAT SZEKCIÓ -->
-    <section id="kapcsolat" class="glass slide-up cta-section">
-      <h2>Megoldjuk?</h2>
-      <p class="cta-lead">Dobj egy üzit vagy csörgess meg, mondd el a szitut, mondok egy árat, és már indítom is a motort!</p>
-      
-      <div class="cta-wrapper">
-        <button type="button" class="cta sms" onclick="openMessenger('sms')">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-          Gyors SMS Küldése
-        </button>
-
-        <button type="button" class="cta call" onclick="openMessenger('call')">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-          </svg>
-          Azonnali Hívás
-        </button>
-        
-        <span class="cta-note">Nincs kötelezettség, egyeztessünk!</span>
-      </div>
-    </section>
-
-    <!-- FOOTER & LEGAL -->
-    <section class="glass slide-up intellectual">
+    <section class="glass slide-up">
+      <h2>Fontos</h2>
       <p class="legal">
-        <strong>Fontos tudnivaló:</strong> Ez a kezdeményezés egyedi, alkalmi városi segítségnyújtás előzetes, eseti megállapodás alapján. Nem minősül menetrendszerű taxiszolgáltatásnak vagy hivatalosan regisztrált postai futárszolgálatnak.
+        Ez a szolgáltatás nem taxi vagy futárszolgálat.<br>
+        Egyedi, alkalmi városi segítségnyújtás,<br>
+        előzetes megállapodással.
       </p>
     </section>
 
     <footer>
-      <p>© Urban Cruiser — Budapest Két Keréken</p>
+      <p>© Urban Cruiser</p>
     </footer>
   </main>
 
